@@ -1,52 +1,223 @@
+/* -------------------- Root & Base -------------------- */
 :root {
-  --accent:#0f62fe;
-  --muted:#6b7280;
-  --bg:#f8fafc;
-  --card:#ffffff;
-  --radius:12px;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --accent: #0f62fe;
+  --muted: #6b7280;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --radius: 12px;
+  font-family: Inter, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-* { box-sizing:border-box }
-body { margin:0; background:var(--bg); color:#0b1220; line-height:1.5 }
-.container { max-width:980px; margin:36px auto; padding:20px }
+* {
+  box-sizing: border-box;
+}
 
-header { display:flex; align-items:center; justify-content:space-between; gap:16px }
-.brand { display:flex; align-items:center; gap:12px }
-.avatar { width:56px; height:56px; border-radius:10px; background:linear-gradient(135deg,var(--accent),#7a5cff); display:flex; align-items:center; justify-content:center; color:white; font-weight:700 }
-.subtitle { color:var(--muted); font-size:13px }
-nav a { margin-left:14px; color:var(--muted); text-decoration:none; font-weight:600 }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #0b1220;
+  line-height: 1.5;
+}
 
-.hero { margin:28px 0; padding:28px; background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0)); border-radius:var(--radius) }
-.hero h1 { margin:0; font-size:28px }
-.hero p { margin:8px 0; color:var(--muted) }
+.container {
+  max-width: 980px;
+  margin: 36px auto;
+  padding: 20px;
+}
 
-.cta-row { margin-top:12px }
-.cta { display:inline-block; background:var(--accent); color:white; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700 }
-.secondary-cta { margin-left:10px; color:var(--muted); text-decoration:none; font-weight:700 }
+/* -------------------- Header -------------------- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
 
-.grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:18px }
-.card { background:var(--card); padding:16px; border-radius:12px; box-shadow:0 6px 18px rgba(10,20,40,0.06) }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-.projects .project-card { padding:12px; display:flex; flex-direction:column; gap:12px }
-.project-snap { height:140px; background:#eef2ff; border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--muted); font-weight:600 }
-.project-title { font-weight:700; margin:0 }
-.project-desc { margin:0; color:var(--muted); font-size:14px }
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    #7a5cff
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+}
 
-.skills { display:flex; flex-wrap:wrap; gap:10px; margin-top:8px }
-.skill { padding:8px 12px; background:#fbfbfd; border-radius:999px; border:1px solid #eef2ff; font-weight:600; font-size:13px; color:#111 }
+.subtitle {
+  color: var(--muted);
+  font-size: 13px;
+}
 
-.contact-list { display:flex; flex-direction:column; gap:8px }
-.link { color:var(--accent); text-decoration:none; font-weight:700 }
+nav a {
+  margin-left: 14px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
 
-.meta-row { display:flex; gap:8px; align-items:center; color:var(--muted); font-size:14px }
-.muted { color:var(--muted) }
+/* -------------------- Hero Section -------------------- */
+.hero {
+  margin: 28px 0;
+  padding: 28px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: var(--radius);
+}
 
-footer { margin-top:28px; font-size:13px; text-align:center; padding-bottom:18px }
+.hero h1 {
+  margin: 0;
+  font-size: 28px;
+}
 
-/* Mobile */
-@media (max-width:720px) {
-  .grid { grid-template-columns:1fr }
-  .avatar { width:48px; height:48px }
-  nav { display:none }
+.hero p {
+  margin: 8px 0;
+  color: var(--muted);
+}
+
+.cta-row {
+  margin-top: 12px;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.secondary-cta {
+  margin-left: 10px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* -------------------- Layout & Cards -------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(10, 20, 40, 0.06);
+}
+
+/* -------------------- Projects -------------------- */
+.projects .project-card {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 18px; /* 👈 add this */
+}
+
+.project-snap {
+  height: 140px;
+  background: #eef2ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.project-title {
+  font-weight: 700;
+  margin: 0;
+}
+
+.project-desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* -------------------- Skills -------------------- */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.skill {
+  padding: 8px 12px;
+  background: #fbfbfd;
+  border-radius: 999px;
+  border: 1px solid #eef2ff;
+  font-weight: 600;
+  font-size: 13px;
+  color: #111;
+}
+
+/* -------------------- Contact -------------------- */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* -------------------- Meta & Footer -------------------- */
+.meta-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+footer {
+  margin-top: 28px;
+  font-size: 13px;
+  text-align: center;
+  padding-bottom: 18px;
+}
+
+/* -------------------- Mobile -------------------- */
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .avatar {
+    width: 48px;
+    height: 48px;
+  }
+  nav {
+    display: none;
+  }
 }
