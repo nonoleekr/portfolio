@@ -14,7 +14,7 @@ Showcases my projects, skills, and contact links in a clean and responsive layou
 ---
 
 ## 🚀 Live Demo
-👉 [View Portfolio](https://yourusername.github.io/portfolio/)  
+👉 [View Portfolio](https://nonoleekr.github.io/portfolio/)  
 
 ---
 
@@ -44,8 +44,7 @@ portfolio/
 ---
 
 ## 📸 Screenshots
-_Add a screenshot of your portfolio here_  
-![screenshot](assets/portfolio-screenshot.png)
+![screenshot](assets/image/portfolio-screenshot.png)
 
 ---
 
@@ -63,8 +62,8 @@ Feel free to open an issue or suggest improvements.
 ---
 
 ## 📬 Contact
-- GitHub: [@yourusername](https://github.com/yourusername)  
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)  
+- GitHub: [@yourusername](https://github.com/nonoleekr)  
+- LinkedIn: [Your Name](https://www.linkedin.com/in/ronald-lee-782b22244)  
 - Email: you@example.com  
 
 ---
