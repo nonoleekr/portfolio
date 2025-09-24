@@ -44,7 +44,7 @@ portfolio/
 ---
 
 ## 📸 Screenshots
-![screenshot](assets/image/portfolio-screenshot.png)
+![screenshot](assets\images\portfolio-screenshot.png)
 
 ---
 
