@@ -1,0 +1,65 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 4 0 R >> >> /MediaBox [0 0 612 792] /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1956 >>
+stream
+BT /F1 11 Tf
+1 0 0 1 50 740 Tm (Ronald Lee) Tj
+1 0 0 1 50 724 Tm (Computer Science Student - AI / Software Engineering / Cybersecurity) Tj
+1 0 0 1 50 708 Tm (Email: nonoleekr@gmail.com | GitHub: github.com/nonoleekr | LinkedIn: /in/ronald-lee-782b22244) Tj
+1 0 0 1 50 692 Tm () Tj
+1 0 0 1 50 676 Tm (EDUCATION) Tj
+1 0 0 1 50 660 Tm (B.S. Computer Science, University Name \(2023 - 2027\)) Tj
+1 0 0 1 50 644 Tm (Focus: Artificial Intelligence and Cybersecurity) Tj
+1 0 0 1 50 628 Tm () Tj
+1 0 0 1 50 612 Tm (SKILLS) Tj
+1 0 0 1 50 596 Tm (Languages: Python, Java, Kotlin, Dart, JavaScript, TypeScript, SQL, C++, Swift) Tj
+1 0 0 1 50 580 Tm (Frontend: React, Next.js, Flutter, Tailwind CSS) Tj
+1 0 0 1 50 564 Tm (Backend: Node.js, Express, Firebase, REST APIs) Tj
+1 0 0 1 50 548 Tm (AI/ML: TensorFlow, Scikit-learn, Hugging Face, OpenAI APIs, RAG) Tj
+1 0 0 1 50 532 Tm (Security: Burp Suite, Wireshark, Ghidra, Hashcat, SQLMap, Gobuster, FFUF) Tj
+1 0 0 1 50 516 Tm () Tj
+1 0 0 1 50 500 Tm (EXPERIENCE) Tj
+1 0 0 1 50 484 Tm (Software Engineering Intern - Company Name \(Jun 2025 - Aug 2025\)) Tj
+1 0 0 1 50 468 Tm (Freelance Developer - Self-employed \(Jan 2024 - Present\)) Tj
+1 0 0 1 50 452 Tm (Open Source Contributor - Various repositories \(Sep 2024 - Present\)) Tj
+1 0 0 1 50 436 Tm () Tj
+1 0 0 1 50 420 Tm (CERTIFICATIONS) Tj
+1 0 0 1 50 404 Tm (Google IT Support Professional Certificate) Tj
+1 0 0 1 50 388 Tm (Introduction to Cybersecurity, Cisco) Tj
+1 0 0 1 50 372 Tm (Deep Learning Specialization, DeepLearning.AI) Tj
+1 0 0 1 50 356 Tm (Practical Ethical Hacking, TCM Security) Tj
+1 0 0 1 50 340 Tm () Tj
+1 0 0 1 50 324 Tm (AWARDS) Tj
+1 0 0 1 50 308 Tm (Hackathon Finalist - Campus Hack Night, 2025) Tj
+1 0 0 1 50 292 Tm (Dean's List - University Name, 2024) Tj
+1 0 0 1 50 276 Tm () Tj
+1 0 0 1 50 260 Tm (This is a placeholder resume generated for the portfolio site.) Tj
+1 0 0 1 50 244 Tm (Replace public/resume.pdf with your real resume PDF.) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2319
+%%EOF

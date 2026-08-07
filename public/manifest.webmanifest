@@ -1,0 +1,17 @@
+{
+  "name": "Ronald Lee — Portfolio",
+  "short_name": "Ronald Lee",
+  "description": "Computer Science student specializing in AI, software engineering, mobile development, networking, and cybersecurity.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

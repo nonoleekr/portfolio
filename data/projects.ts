@@ -1,0 +1,206 @@
+import type { Project } from "@/types";
+
+export const projects: Project[] = [
+  {
+    slug: "ai-symptom-checker",
+    title: "AI Symptom Checker",
+    description:
+      "A conversational triage assistant that maps reported symptoms to likely conditions and urgency levels using an LLM-backed reasoning pipeline.",
+    longDescription:
+      "Built to explore how retrieval-augmented generation can make LLM medical triage safer and more explainable. Symptoms are parsed into structured entities, matched against a curated condition knowledge base, and the model returns a ranked differential with confidence and an urgency flag — always with a disclaimer and a recommendation to seek professional care for anything serious.",
+    image: "/images/projects/ai-symptom-checker.svg",
+    tech: ["Python", "OpenAI API", "RAG", "FastAPI", "React"],
+    features: [
+      "Structured symptom extraction from free text",
+      "RAG pipeline over a curated medical knowledge base",
+      "Confidence-scored differential with urgency flags",
+      "Session history and exportable summaries",
+    ],
+    github: "https://github.com/nonoleekr/ai-symptom-checker",
+    demo: "",
+    tags: ["AI", "LLM", "Healthcare"],
+    featured: true,
+    status: "in-progress",
+    year: 2025,
+  },
+  {
+    slug: "ctf-agent",
+    title: "CTF Agent",
+    description:
+      "An autonomous agent that solves beginner-to-intermediate CTF challenges (web, crypto, forensics) by chaining recon, tool calls, and an LLM planner.",
+    longDescription:
+      "Combines a planning LLM with a sandboxed tool layer (Burp-style requests, hash cracking, file forensics) so the agent can iteratively test hypotheses against a challenge, log its reasoning, and surface the flag with a full audit trail of every command it ran.",
+    image: "/images/projects/ctf-agent.svg",
+    tech: ["Python", "LLM Agents", "Docker", "Wireshark", "Hashcat"],
+    features: [
+      "Tool-calling agent loop with sandboxed execution",
+      "Support for web, crypto, and forensics challenge categories",
+      "Full reasoning + command audit trail per run",
+      "Pluggable tool registry for adding new CTF categories",
+    ],
+    github: "https://github.com/nonoleekr/ctf-agent",
+    demo: "",
+    tags: ["Cybersecurity", "AI", "CTF"],
+    featured: true,
+    status: "in-progress",
+    year: 2025,
+  },
+  {
+    slug: "resume-tailor-ai",
+    title: "Resume Tailor AI",
+    description:
+      "Rewrites a resume's bullet points to match a target job description, highlighting relevant keywords and quantifying impact where possible.",
+    image: "/images/projects/resume-tailor-ai.svg",
+    tech: ["Next.js", "TypeScript", "OpenAI API", "Tailwind CSS"],
+    features: [
+      "Job description keyword extraction and gap analysis",
+      "Bullet-point rewriting with quantified impact suggestions",
+      "ATS-friendliness scoring",
+      "Exportable tailored resume (PDF)",
+    ],
+    github: "https://github.com/nonoleekr/resume-tailor-ai",
+    demo: "",
+    tags: ["AI", "Productivity", "Next.js"],
+    featured: true,
+    status: "concept",
+    year: 2025,
+  },
+  {
+    slug: "dsa-visualizer",
+    title: "Data Structures & Algorithms Visualizer",
+    description:
+      "Interactive step-by-step visualizations for sorting algorithms, trees, graphs, and pathfinding, built for learning and teaching.",
+    image: "/images/projects/dsa-visualizer.svg",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    features: [
+      "Step-through controls with adjustable speed",
+      "Sorting, tree, graph, and pathfinding visualizations",
+      "Complexity annotations per algorithm",
+      "Shareable visualization state via URL",
+    ],
+    github: "https://github.com/nonoleekr/dsa-visualizer",
+    demo: "",
+    tags: ["Education", "Algorithms", "React"],
+    featured: true,
+    status: "completed",
+    year: 2024,
+  },
+  {
+    slug: "travel-app",
+    title: "Travel App",
+    description:
+      "A cross-platform trip planner with itinerary building, offline maps, and collaborative packing lists.",
+    image: "/images/projects/travel-app.svg",
+    tech: ["Flutter", "Dart", "Firebase"],
+    features: [
+      "Collaborative itinerary editing in real time",
+      "Offline-first map caching",
+      "Shared packing lists and budgets",
+    ],
+    github: "https://github.com/nonoleekr/travel-app",
+    demo: "",
+    tags: ["Mobile", "Flutter"],
+    featured: false,
+    status: "completed",
+    year: 2024,
+  },
+  {
+    slug: "education-app",
+    title: "Education App",
+    description:
+      "A mobile study companion with spaced-repetition flashcards, progress tracking, and offline sync.",
+    image: "/images/projects/education-app.svg",
+    tech: ["Flutter", "Dart", "SQLite", "Firebase"],
+    features: [
+      "Spaced-repetition scheduling engine",
+      "Offline-first with background sync",
+      "Progress analytics dashboard",
+    ],
+    github: "https://github.com/nonoleekr/education-app",
+    demo: "",
+    tags: ["Mobile", "Education"],
+    featured: false,
+    status: "completed",
+    year: 2024,
+  },
+  {
+    slug: "chat-app",
+    title: "Chat App",
+    description:
+      "A real-time messaging app with presence indicators, read receipts, and end-to-end encrypted DMs.",
+    image: "/images/projects/chat-app.svg",
+    tech: ["React", "Node.js", "Socket.IO", "Firebase"],
+    features: [
+      "Real-time messaging with typing and presence indicators",
+      "End-to-end encrypted direct messages",
+      "Push notifications",
+    ],
+    github: "https://github.com/nonoleekr/chat-app",
+    demo: "",
+    tags: ["Web", "Real-time"],
+    featured: false,
+    status: "completed",
+    year: 2023,
+  },
+  {
+    slug: "ecommerce-website",
+    title: "E-commerce Website",
+    description:
+      "A full-stack storefront with cart, checkout, and an admin dashboard for inventory and order management.",
+    image: "/images/projects/ecommerce-website.svg",
+    tech: ["React", "Node.js", "Express", "SQL"],
+    features: [
+      "Cart, checkout, and order tracking",
+      "Admin dashboard for inventory management",
+      "Role-based access control",
+    ],
+    github: "https://github.com/nonoleekr/ecommerce-website",
+    demo: "",
+    tags: ["Web", "Full-Stack"],
+    featured: false,
+    status: "completed",
+    year: 2023,
+  },
+  {
+    slug: "water-reminder-app",
+    title: "Water Reminder App",
+    description:
+      "A minimal habit-tracking mobile app that nudges hydration goals with smart, activity-aware reminders.",
+    image: "/images/projects/water-reminder-app.svg",
+    tech: ["Kotlin", "Android SDK"],
+    features: [
+      "Adaptive reminder scheduling based on activity",
+      "Daily/weekly hydration streak tracking",
+      "Home-screen widget",
+    ],
+    github: "https://github.com/nonoleekr/water-reminder-app",
+    demo: "",
+    tags: ["Mobile", "Android"],
+    featured: false,
+    status: "completed",
+    year: 2023,
+  },
+  {
+    slug: "portfolio-website",
+    title: "Portfolio Website",
+    description:
+      "This site — a Next.js portfolio with a JSON-driven content layer, an MDX blog, and a static export pipeline for GitHub Pages.",
+    image: "/images/projects/portfolio-website.svg",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "MDX"],
+    features: [
+      "Data-driven content (projects, skills, experience) with no UI edits needed",
+      "MDX blog with syntax highlighting, TOC, and reading time",
+      "Static export configured for GitHub Pages",
+    ],
+    github: "https://github.com/nonoleekr/portfolio",
+    demo: "https://nonoleekr.github.io/portfolio/",
+    tags: ["Web", "Next.js"],
+    featured: false,
+    status: "completed",
+    year: 2026,
+  },
+];
+
+export const getFeaturedProjects = () => projects.filter((p) => p.featured);
+export const getProjectBySlug = (slug: string) => projects.find((p) => p.slug === slug);
+export const getAllTags = () => Array.from(new Set(projects.flatMap((p) => p.tags))).sort();

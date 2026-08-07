@@ -1,0 +1,45 @@
+---
+title: "Getting Started with RAG: Retrieval-Augmented Generation Explained"
+date: "2026-01-15"
+excerpt: "A practical introduction to RAG — why plain LLM prompting isn't enough, and how retrieval fixes it."
+category: "AI"
+tags: ["AI", "LLM", "RAG", "Machine Learning"]
+author: "Ronald Lee"
+---
+
+Large language models are great at reasoning over what they already know, but they don't know about your data — your docs, your codebase, last week's Slack thread. Retrieval-Augmented Generation (RAG) closes that gap by fetching relevant context at query time and handing it to the model alongside the question.
+
+## Why not just fine-tune?
+
+Fine-tuning bakes knowledge into model weights. It's expensive to update, hard to audit, and prone to hallucination when the model is asked about something slightly outside its training distribution. RAG instead keeps your knowledge base external and searchable, and the model's job shrinks to "answer using *only* what's in front of you."
+
+## The basic pipeline
+
+1. **Chunk** your source documents into passages small enough to fit a few per prompt.
+2. **Embed** each chunk into a vector using an embedding model.
+3. **Store** the vectors in an index (a vector database, or even an in-memory array for small corpora).
+4. **Retrieve** the top-k chunks most similar to the user's query embedding.
+5. **Generate** an answer by prompting the LLM with the retrieved chunks plus the question.
+
+```python
+def answer(question: str, index, llm):
+    query_embedding = embed(question)
+    chunks = index.search(query_embedding, k=4)
+    context = "\n\n".join(chunk.text for chunk in chunks)
+    prompt = f"Answer using only the context below.\n\n{context}\n\nQuestion: {question}"
+    return llm.generate(prompt)
+```
+
+## Where it breaks
+
+RAG isn't magic. A few failure modes worth knowing before you ship it:
+
+- **Bad chunking** — split mid-sentence or mid-table and retrieval quality tanks.
+- **Irrelevant top-k** — semantic search can return confidently wrong matches; reranking helps.
+- **Context starvation** — if the answer spans multiple chunks that don't individually look relevant, naive top-k retrieval misses it.
+
+## Where I've used it
+
+In [CTF Agent](/projects#ctf-agent) I use a lightweight RAG layer over past challenge writeups so the planning model can recall similar techniques instead of reasoning from scratch every time. It's a small corpus, but the retrieval step still meaningfully cuts down on repeated mistakes.
+
+RAG is the highest-leverage first step if you're building anything LLM-powered on top of your own data — get it working before reaching for fine-tuning or agents.

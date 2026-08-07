@@ -1,0 +1,51 @@
+---
+title: "Building Offline-First Apps in Flutter"
+date: "2025-08-20"
+excerpt: "Patterns for making Flutter apps feel instant and reliable, even with no connection — from local-first storage to conflict-free sync."
+category: "Flutter"
+tags: ["Flutter", "Mobile Development", "Tutorials"]
+author: "Ronald Lee"
+---
+
+Most mobile apps assume a connection. Treat the network as optional instead, and both perceived performance and reliability improve a lot — especially for anything used on transit or in spotty coverage.
+
+## The core idea
+
+Read and write to local storage first, then sync to the server in the background. The UI never blocks on the network.
+
+```dart
+Future<void> saveNote(Note note) async {
+  await localDb.notes.put(note); // instant, local
+  syncQueue.enqueue(SyncOp.upsert(note)); // synced later
+}
+```
+
+## Picking local storage
+
+For structured data I default to `drift` (SQLite under the hood) over `sqflite` directly — it gives you type-safe queries and reactive streams, which pairs nicely with Flutter's widget rebuilds:
+
+```dart
+final notesStream = db.select(db.notes).watch();
+```
+
+## Handling sync conflicts
+
+The hard part isn't storing data locally, it's reconciling it once you're back online. A few approaches, roughly in order of complexity:
+
+1. **Last-write-wins** — simplest, fine for single-user data like personal notes.
+2. **Field-level merge** — diff changed fields and merge non-conflicting ones automatically.
+3. **CRDTs** — conflict-free replicated data types, if you need real multi-user collaborative editing.
+
+For the [Travel App](/projects#travel-app) project, collaborative itinerary editing needed more than last-write-wins, so I used a field-level merge with a `updated_at` timestamp per field rather than per row — enough to avoid clobbering a teammate's edit to a different field of the same itinerary item.
+
+## Background sync triggers
+
+Don't just sync on app open — that's the moment users are most likely to be impatient. Instead:
+
+- Sync on connectivity regained (`connectivity_plus`)
+- Sync periodically via `WorkManager` (Android) / `BGTaskScheduler` (iOS)
+- Sync opportunistically after a batch of local writes settles (debounced)
+
+## Result
+
+Done well, users mostly can't tell the app is doing anything special — actions feel instant, and a spotty connection just means a short delay before the sync badge clears. That's the whole point.
