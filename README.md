@@ -44,7 +44,7 @@ portfolio/
 ---
 
 ## 📸 Screenshots
-![screenshot](assets\images\portfolio-screenshot.png)
+![screenshot](assets/images/portfolio-screenshot.png)
 
 ---
 
@@ -62,9 +62,9 @@ Feel free to open an issue or suggest improvements.
 ---
 
 ## 📬 Contact
-- GitHub: [@yourusername](https://github.com/nonoleekr)  
-- LinkedIn: [Your Name](https://www.linkedin.com/in/ronald-lee-782b22244)  
-- Email: you@example.com  
+- GitHub: [@nonoleekr](https://github.com/nonoleekr)  
+- LinkedIn: [Ronald Lee](https://www.linkedin.com/in/ronald-lee-782b22244)  
+- Email: nonoleekr@gmail.com  
 
 ---
 ⭐ If you like this, give it a star — it helps!
