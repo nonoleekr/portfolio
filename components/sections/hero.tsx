@@ -29,7 +29,7 @@ export function Hero() {
           <div className="absolute inset-0 -z-10 rounded-full bg-primary/20 blur-2xl" />
           <div className="size-28 overflow-hidden rounded-full border-4 border-background shadow-xl ring-1 ring-border sm:size-32">
             <Image
-              src={personal.avatar}
+              src={withBasePath(personal.avatar)}
               alt={personal.name}
               width={128}
               height={128}

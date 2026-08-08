@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import type { Project } from "@/types";
 import { fadeInUp } from "@/lib/animations";
+import { withBasePath } from "@/lib/utils";
 
 const statusLabel: Record<Project["status"], string> = {
   completed: "Completed",
@@ -22,7 +23,7 @@ export function ProjectCard({ project }: { project: Project }) {
       <Card className="group flex h-full flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
         <div className="relative aspect-[16/10] overflow-hidden">
           <Image
-            src={project.image}
+            src={withBasePath(project.image)}
             alt={project.title}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"

@@ -4,6 +4,7 @@ import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import type { Certification } from "@/types";
+import { withBasePath } from "@/lib/utils";
 
 export function CertificationCard({ cert }: { cert: Certification }) {
   return (
@@ -11,7 +12,7 @@ export function CertificationCard({ cert }: { cert: Certification }) {
       <CardContent className="flex h-full flex-col gap-4 p-6">
         <div className="flex items-start justify-between gap-3">
           <div className="flex size-11 items-center justify-center overflow-hidden rounded-lg border border-border bg-secondary">
-            <Image src={cert.logo} alt={cert.organization} width={44} height={44} />
+            <Image src={withBasePath(cert.logo)} alt={cert.organization} width={44} height={44} />
           </div>
           <span className="text-xs text-muted-foreground">{cert.date}</span>
         </div>
